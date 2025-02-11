@@ -14,9 +14,7 @@ Créez le type HttpMethod, qui combine les valeurs suivantes (chaines de caract�
 Retenez ces verbes, ils sont utilisés aussi bien en backend qu'en frontend
 */
 
-type HttpMethod = {
-    method:string = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
-};
+type HttpMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
 /*
 2. La Requête 
@@ -100,7 +98,7 @@ Le type ValidationSchema est constitué de deux propriétés:
 */
 
 type ValidationSchema = {
-    fields:;
+    fields:Record<string, number>;
     required?:string[];
 }
 
@@ -119,9 +117,17 @@ Une route est composée des paramètres suivants:
 - responseInterceptors, une liste d'Interceptors, facultative
 
 Vous verrez tout ça plus en détail en cours d'Architecture et en troisième année
-/*
+*/
 
-// Implémentez ici
+type Route = {
+    path:string;
+    method:RequestMethod;
+    handler:string;
+    quards?:Guard[];
+    validationSchema?:ValidationSchema;
+    requestInterceptors?:Interceptor[];
+    responseInterceptors?:Interceptor[];
+}
 
 
 /*
@@ -139,3 +145,9 @@ Notre réponse aura les propriétés suivantes:
 Angular gèrera une bonne partie de la réponse pour vous, il vous donnera directement accès au body, et propose un 
 système de gestion d'erreur.
 */
+
+type Reponse = {
+    statusCode:number;
+    headers:string & {"Content-Type" : string};
+    body?:{key:string, value:unknown};
+}
