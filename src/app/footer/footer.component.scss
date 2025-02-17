@@ -1,0 +1,62 @@
+footer {
+    background: linear-gradient(to top right, #60a5fa, #3b82f6);
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+
+    #footer-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 100px;
+        margin: 0 10% 0 10%;
+
+        @media (width > 1200px){
+            flex-direction: row;
+        }
+
+        #footer-text{
+            width: 400px;
+            
+            #logo{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px
+            }
+
+            #trafalgar{
+                margin: 0;
+                font-family: 'Mulish';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                color: white;
+            }
+        }
+
+        .footer-links{
+            text-align: center;
+
+            @media (width > 1200px){
+                text-align: left;
+            }
+
+            ul {
+                padding: 0;
+
+                .footer-li{
+                    list-style: none;
+                    color: white;
+                    margin: 0;
+                    text-align: center;
+                    
+                    @media (width > 1200px){
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}

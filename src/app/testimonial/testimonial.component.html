@@ -2,10 +2,14 @@
     <h3>What our customer are saying</h3>
     <hr />
     <div class="testimonial-content">
-      <img [src]="customer.image" alt="{{ customer.name }}" class="avatar" />
+      <div class="testimonial-customer">
+        <img [src]="customer.image" alt="{{ customer.name }}" class="avatar" />
+        <div>
+          <h4>{{ customer.name }}</h4>
+          <p class="role">{{ customer.role }}</p>
+        </div>
+      </div>
       <div class="testimonial-info">
-        <h4>{{ customer.name }}</h4>
-        <p class="role">{{ customer.role }}</p>
         <blockquote>
           "{{ customer.testimonial }}"
         </blockquote>
@@ -13,9 +17,14 @@
     </div>
 </div>
 <div class="controls">
-    <app-button (click)="prevTestimonial()">←</app-button>
-
-  
-    <app-button (click)="nextTestimonial()">→</app-button>
+    <button (click)="prevTestimonial()">←</button>
+    @for (testimonial of testimonials; track $index) {
+      @if (currentIndex === $index) {
+          <div class="testimonial active-testimonial"></div>
+      } @else {
+          <div class="testimonial"></div>
+      }
+  }
+    <button (click)="nextTestimonial()">→</button>
 </div>
   

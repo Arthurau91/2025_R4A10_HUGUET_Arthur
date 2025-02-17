@@ -10,8 +10,8 @@ import { ButtonComponent } from '../button/button.component';
 })
 export class TestimonialComponent {
   testimonials = [
-    { name: 'Edward Newgate', role: 'Founder Circle', image: 'assets/edward-newgate.jpg', testimonial: 'Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedious form, long calls, or administrative hassle) and securely.' },
-    { name: 'Jane Doe', role: 'CEO, Tech Solutions', image: 'assets/jane-doe.jpg', testimonial: 'This service has revolutionized how we interact with our customers. Highly recommended!' }
+    { name: 'Edward Newgate', role: 'Founder Circle', image: 'assets/Edward_Newgate.png', testimonial: 'Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedious form, long calls, or administrative hassle) and securely.' },
+    { name: 'Portgas D. Ace', role: 'CEO, Tech Solutions', image: 'assets/Portgas_D._Ace.png', testimonial: 'This service has revolutionized how we interact with our customers. Highly recommended!' }
   ];
 
   currentIndex = 0;

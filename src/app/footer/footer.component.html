@@ -1,0 +1,21 @@
+<footer>
+    <div id="footer-container">
+        <div id="footer-text">
+            <div id="logo">
+                <img src="assets/logo_footer.png" alt="logo_footer">
+                <p id="trafalgar">Trafalgar</p>
+            </div>
+            <p>Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone<br><br>©Trafalgar PTY LTD 2020. All rights reserved</p>
+        </div>
+        @for (category of categories ; track $index){
+            <div class="footer-links">
+                <h4>{{category.title}}</h4>
+                <ul>
+                    @for (link of category.links ; track $index){ 
+                        <li class="footer-li">{{link}}</li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+</footer>
