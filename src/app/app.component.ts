@@ -1,13 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { ServicesComponent } from "./services/services.component";
+import { TestimonialComponent } from './testimonial/testimonial.component';
+
+export type ListItem = {
+    src: string;
+    title: string;
+    description: string;
+};
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [HeaderComponent, ServicesComponent, TestimonialComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.sass'
+  styleUrl: './app.component.scss',
 })
+
 export class AppComponent {
-  title = 'TP2';
 }

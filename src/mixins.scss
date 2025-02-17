@@ -1,0 +1,15 @@
+$breakpoints: (
+  sm: 768px,
+  md: 1024px,
+  lg: 1200px,
+);
+
+@mixin min-w($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media screen and (min-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @warn "Le breakpoint '#{$size}' n'existe pas dans $breakpoints.";
+  }
+}

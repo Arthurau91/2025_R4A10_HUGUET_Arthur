@@ -1,0 +1,48 @@
+@import "../../mixins.scss";
+
+.content {
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+
+    @include min-w(sm) {
+        display: flex;
+    }
+}
+
+#subjectImage {
+    max-width: 360px;
+
+    @include min-w(sm) {
+        max-width: 443px;
+    }
+    
+    @include min-w(md) {
+        max-width: 591px;
+    }
+    
+    @include min-w(lg) {
+        max-width: 693px;
+    }
+}
+
+#title {
+    font-size: 3em;
+}
+
+#description {
+    color: #767d83;
+}
+
+button {
+    background: #458FF6;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #458FF6;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  

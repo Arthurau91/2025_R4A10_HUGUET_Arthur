@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./mixins.scss";
+
+body {
+  margin-block: 0;
+  font-family: 'Mulish', sans-serif;
+  margin: 0%;
+}
+
+.container {
+  display: block;
+  margin: auto;
+
+  @include min-w(sm) {
+    max-width: 600px;
+  }
+
+  @include min-w(md) {
+    max-width: 768px;
+  }
+
+  @include min-w(lg) {
+    max-width: 1024px;
+  }
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+}

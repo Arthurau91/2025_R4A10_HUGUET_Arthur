@@ -1,0 +1,8 @@
+<ul class="grid">
+  @for (card of cards; track card){
+  <app-single-card [cardData]="card" />
+  }
+  @empty {
+  <li>Aucun élément dans la liste</li>
+  }
+</ul>

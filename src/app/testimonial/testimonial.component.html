@@ -1,0 +1,21 @@
+<div class="testimonial-card">
+    <h3>What our customer are saying</h3>
+    <hr />
+    <div class="testimonial-content">
+      <img [src]="customer.image" alt="{{ customer.name }}" class="avatar" />
+      <div class="testimonial-info">
+        <h4>{{ customer.name }}</h4>
+        <p class="role">{{ customer.role }}</p>
+        <blockquote>
+          "{{ customer.testimonial }}"
+        </blockquote>
+      </div>
+    </div>
+</div>
+<div class="controls">
+    <app-button (click)="prevTestimonial()">←</app-button>
+
+  
+    <app-button (click)="nextTestimonial()">→</app-button>
+</div>
+  

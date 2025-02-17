@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="introduction">
+        <h2>Our services</h2>
+        <hr>
+        <p>We provide to you the best choices for you. Adjust it to your health needs and make sure your undergo treatment
+             with our highly qualified doctors you can consult with us wich type of service is suitable for your health</p>
+    </div>
+    <app-card-list [cards]="slicedList" (pageChangeEvent)="onPageChange($event)" />
+    <app-button>Learn more</app-button>
+</div>

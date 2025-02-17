@@ -1,0 +1,24 @@
+.card {
+  border: 1px solid white;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 30px;
+  padding: 30px;
+  margin: 15px;
+  min-height: 280px;
+  text-align: left;
+
+  &__image {
+    height: 100px;
+    display: block;
+  }
+
+  &__content {
+    padding: 10px;
+
+  }
+
+  p {
+    color: gray;
+  }
+}
