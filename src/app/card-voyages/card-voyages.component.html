@@ -1,0 +1,12 @@
+<div class="voyage-card">
+  <div>
+    <h1>Destination : {{destination}}</h1>
+    <p>Description : {{description}}</p>
+    <p class="prix">Prix : {{prix}}€</p>
+  </div>
+  <div class="buttons">
+    <button [routerLink]="'/detail/' + id" class="bluebutton">Voir détails</button>
+    <app-popup></app-popup>
+    <button (click)="openPopUp()">Supprimer le voyage</button>
+  </div>
+</div>

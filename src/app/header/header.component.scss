@@ -1,0 +1,35 @@
+header {
+    background-color: antiquewhite;
+    padding: 20px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .main-logo {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: x-large;
+          
+            &:hover {
+              color: red;
+            }
+        }
+        
+        .current {
+            color: green;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}

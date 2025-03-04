@@ -1,1 +1,11 @@
-<p>detailpage works!</p>
+<div class="container">
+  <div>
+    <h1>Destination : {{destination}}</h1>
+    <p class="prix">Prix : {{prix}}€</p>
+  </div>
+  <div class="description">
+    <p>{{description}}</p>
+  </div>
+  <app-popup></app-popup>
+  <button (click)="openPopUp()">Supprimer le voyage</button>
+</div>

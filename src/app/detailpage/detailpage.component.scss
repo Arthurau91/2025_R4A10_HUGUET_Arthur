@@ -1,0 +1,24 @@
+.container {
+    margin: 20px;
+
+    .prix {
+        font-weight: bold;
+        color: #007bff;
+        margin-top: 10px;
+    }
+
+    button {
+        border: none;
+        padding: 8px 12px;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        background: #dc3545;
+        color: white;
+
+        &:hover {
+          background: #a71d2a;
+        }
+    }
+}

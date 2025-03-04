@@ -1,0 +1,17 @@
+<h2>Liste des voyages disponible :</h2>
+<ul class="grid">
+  @for (card of voyages ; track card.id){ 
+    <app-cardvoyages [description]="card.description"
+                    [destination]="card.destination"
+                    [prix]="card.prix"
+                    [id]="card.id"
+                    (suprimmer)="suprimmerElement($event)">
+    </app-cardvoyages>
+  }
+</ul>
+
+<div class="pagination">
+  <button (click)="previousPage()" [disabled]="actualPage === 0">Précédent</button>
+  <span>Page {{ actualPage + 1 }} sur {{ totalPage }}</span>
+  <button (click)="nextPage()" [disabled]="actualPage === totalPage - 1">Suivant</button>
+</div>

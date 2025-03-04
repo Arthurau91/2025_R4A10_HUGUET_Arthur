@@ -1,0 +1,11 @@
+<div class="dialog-overlay" *ngIf="isVisible">
+    <div class="dialog-box">
+      <h2>Confirmation</h2>
+      <p>Êtes-vous sûr de vouloir supprimer ce voyage ?</p>
+      <div class="actions">
+        <button (click)="onCancel()">Annuler</button>
+        <button class="danger" (click)="onConfirm()">Supprimer</button>
+      </div>
+    </div>
+</div>
+  
