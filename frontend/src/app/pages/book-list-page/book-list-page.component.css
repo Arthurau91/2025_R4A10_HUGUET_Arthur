@@ -32,3 +32,18 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: red;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover:not(:disabled) {
+    background: rgb(160, 0, 0);
+  }
+}

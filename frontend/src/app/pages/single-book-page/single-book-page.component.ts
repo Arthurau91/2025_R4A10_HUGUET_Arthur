@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../../models/book';
-import { ActivatedRoute } from '@angular/router';
-import { BooksInMemoryService } from '../../services/book-inmemory.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { BookService } from '../../services/book.service';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-single-book-page',
@@ -15,11 +16,35 @@ export class SingleBookPageComponent implements OnInit {
 
   constructor(
     private readonly route: ActivatedRoute,
-    private readonly bookService: BooksInMemoryService
+    private readonly bookService: BookService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.book = this.bookService.getBookById(id);
+    this.bookService
+      .getBook(id)
+      .pipe(take(1))
+      .subscribe((data) => {
+        this.book = data;
+      });
+  }
+
+  noBook() {
+    this.router.navigate(['/']);
+  }
+
+  delBook(id: number) {
+    this.bookService
+      .delBook(id)
+      .pipe(take(1))
+      .subscribe(
+        () => {
+          this.router.navigate(['/']);
+        },
+        (error) => {
+          console.error('An error occurred at the book deletion : ', error);
+        }
+      );
   }
 }

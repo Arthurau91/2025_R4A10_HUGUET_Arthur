@@ -4,5 +4,10 @@
   <p class="author">Auteur : {{ book.author }}</p>
   <p class="description">{{ book.description }}</p>
   <img [src]="book.coverUrl" alt="{{ book.title }} cover" class="cover" />
+  <button (click)="delBook(book.id)">Supprimer le livre</button>
 </div>
+}
+@else {
+  <p>Erreur : Le livre n'existe pas.</p>
+  <button (click)="noBook()">Retourner à la page d'accueil</button>
 }
